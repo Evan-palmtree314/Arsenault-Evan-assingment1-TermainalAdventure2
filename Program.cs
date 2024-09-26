@@ -6,6 +6,7 @@ Console.WriteLine("type A to go left B to go right and C to investagate");
 Console.WriteLine("what do you do? please use capitals :)");
 
 string playerInput = Console.ReadLine();
+//this is the main choice selection if they type A,B or C in caps it will play out the next set of next coresponding to the selection
 {
     if (playerInput == "A")
     {
@@ -18,12 +19,14 @@ string playerInput = Console.ReadLine();
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("type A to continue down the path or B to look at the figure in the water use capitals please");
         string playerInputRoute1 = Console.ReadLine();
+        //this is the second choice for this section works the same but both end with the end of the program
         if (playerInputRoute1 == "A")
         {
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("you continue down the path and come to a exit to the dungeon");
             Console.WriteLine("YOU ESCAPED");
         }
+        //else if is used to quickly give a short list of accetable paramaters if i used another if statment it would inpact performance
         else if (playerInputRoute1 == "B")
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -32,7 +35,7 @@ string playerInput = Console.ReadLine();
         }
 
     }
-
+    //second section works the same as the first
     else if (playerInput == "B")
     {
         Console.WriteLine("down the hallway the area becomes frigid and the floor is coverd in a thin veil of ice");
@@ -57,7 +60,7 @@ string playerInput = Console.ReadLine();
         }
 
     }
-
+    //thrid section works the same as last 2 with a catch that i put the same code from the past segements into the 2nd part of it this could be done more effeicntly with functions and or loops but it still works
     else if (playerInput == "C")
     {
         Console.ForegroundColor = ConsoleColor.Red;
@@ -76,6 +79,7 @@ string playerInput = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("you have a door to your left and right as well as a entrance out side");
             Console.WriteLine("type A to go left B to go right and C to go out;");
+         //start of the repeated choices
             string playerInput2 = Console.ReadLine();
             {
                 if (playerInput2 == "A")
@@ -128,7 +132,7 @@ string playerInput = Console.ReadLine();
                     }
 
                 }
-
+                //end of the repeated choices glad im not being marked for story
                 else if (playerInput2 == "C")
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
